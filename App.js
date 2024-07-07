@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import EmployeeForm from './Components/EmployeeForm'; // Adjust the path based on your file structure
+import EmployeeForm from './Components/EmployeeForm'; 
 
 class App extends Component {
   render() {
