@@ -9,7 +9,6 @@ super(props);
 this.state = {name: '', email: '', title: '',
 department: ''};
 }
-// your methods for handling input and form
 
   onChange = (event) => {
     const { name, value } = event.target;
@@ -18,9 +17,7 @@ department: ''};
 
   onSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission logic here, e.g., sending data to server or parent component
     console.log('Form submitted with state:', this.state);
-    // Reset form fields if needed
     this.setState({
       firstName: '',
       lastName: '',
