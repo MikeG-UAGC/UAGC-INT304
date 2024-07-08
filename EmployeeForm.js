@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './EmployeeForm.css';
 
-
-class EmployeeForm extends
-React.Component {
-constructor(props) {
-super(props);
-this.state = {name: '', email: '', title: '',
-department: ''};
-}
+class EmployeeForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { firstName: '', lastName: '', email: '' };
+  }
 
   onChange = (event) => {
     const { name, value } = event.target;
@@ -17,12 +14,12 @@ department: ''};
 
   onSubmit = (event) => {
     event.preventDefault();
-    console.log('Form submitted with state:', this.state);
-    this.setState({
-      firstName: '',
-      lastName: '',
-      email: ''
-    });
+    const { firstName, lastName, email } = this.state;
+    if (firstName && lastName && email) {
+      const newEmployee = { firstName, lastName, email };
+      this.props.addEmployee(newEmployee);
+      this.setState({ firstName: '', lastName: '', email: '' }); // Reset form fields
+    }
   }
 
   render() {
@@ -58,11 +55,11 @@ department: ''};
           />
         </label>
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit">Add Employee</button>
+        <button type="button" onClick={this.props.saveData}>Save Data</button>
       </form>
     );
   }
 }
 
 export default EmployeeForm;
-
