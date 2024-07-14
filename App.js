@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import EmployeeForm from './Components/EmployeeForm'; // Adjust the path based on your file structure
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import EmployeeForm from './Components/EmployeeForm';
+import EmployeeList from './Components/EmployeeList'; // Adjust the path based on your file structure
 
 class App extends Component {
   constructor(props) {
@@ -25,10 +27,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>Employee Form</h1>
-        <EmployeeForm addEmployee={this.addEmployee} saveData={this.saveData} />
-      </div>
+      <Router>
+        <div className="App">
+          <h1>Employee Management</h1>
+          <Routes>
+            <Route path="/" element={
+              <div>
+                <EmployeeForm addEmployee={this.addEmployee} saveData={this.saveData} />
+                <EmployeeList employees={this.state.employees} />
+              </div>
+            } />
+          </Routes>
+        </div>
+      </Router>
     );
   }
 }
