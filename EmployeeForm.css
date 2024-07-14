@@ -1,87 +1,96 @@
+.employee-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .employee-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .employee-form label {
-    margin-bottom: 0.5rem;
-  }
-  
-  .employee-form input {
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border-radius: 0.25rem;
-    border: 1px solid #ccc;
-  }
-  
-  .employee-form button {
-    padding: 0.5rem 1rem;
-    background-color: #0077cc;
-    color: #fff;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-  }
-  
-  .employee-list {
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    color: #333;
-    align-items: center;
-  }
-  
-  .employee-list h1 {
-    font-size: 24px;
-    margin-bottom: 16px;
-  }
-  
-  .employee-list ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .employee-list li {
-    margin-bottom: 8px;
-  }
-  
-  .employee-list li a {
-    color: #007bff;
-    text-decoration: none;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .employee-detail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .employee-detail label {
-    font-weight: bold;
-  }
+.employee-form label {
+  margin-bottom: 0.5rem;
+  text-align: left; /* Align text to the left for better readability */
+  width: 100%;
+  max-width: 300px; /* Set a max-width to control the form width */
+}
 
-  .employee-detail table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  .employee-detail td, .employee-detail th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  .employee-detail tr:nth-child(even){background-color: #f2f2f2;}
-  
-  .employee-detail tr:hover {background-color: #ddd;}
-  
-  .employee-detail th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #0077cc;
-    color: white;
-  }
+.employee-form input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px; /* Set a max-width to control the form width */
+}
+
+.employee-form button {
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 300px; /* Set a max-width to control the form width */
+}
+
+.save-button {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 300px; /* Set a max-width to control the form width */
+}
+
+.employee-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.employee-list h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.employee-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.employee-list li {
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.employee-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.employee-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.employee-link:hover {
+  text-decoration: underline;
+}

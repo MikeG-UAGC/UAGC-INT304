@@ -24,40 +24,42 @@ class EmployeeForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
-        <label>
-          First Name:
-          <input 
-            type="text" 
-            name="firstName" 
-            value={this.state.firstName} 
-            onChange={this.onChange} 
-          />
-        </label>
-        <br />
-        <label>
-          Last Name:
-          <input 
-            type="text" 
-            name="lastName" 
-            value={this.state.lastName} 
-            onChange={this.onChange} 
-          />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input 
-            type="email" 
-            name="email" 
-            value={this.state.email} 
-            onChange={this.onChange} 
-          />
-        </label>
-        <br />
-        <button type="submit">Add Employee</button>
-        <button type="button" onClick={this.props.saveData}>Save Data</button>
-      </form>
+      <div className="employee-form-container">
+        <form className="employee-form" onSubmit={this.onSubmit}>
+          <label>
+            First Name:
+            <input 
+              type="text" 
+              name="firstName" 
+              value={this.state.firstName} 
+              onChange={this.onChange} 
+            />
+          </label>
+          <br />
+          <label>
+            Last Name:
+            <input 
+              type="text" 
+              name="lastName" 
+              value={this.state.lastName} 
+              onChange={this.onChange} 
+            />
+          </label>
+          <br />
+          <label>
+            Email:
+            <input 
+              type="email" 
+              name="email" 
+              value={this.state.email} 
+              onChange={this.onChange} 
+            />
+          </label>
+          <br />
+          <button type="submit">Add Employee</button>
+        </form>
+        <button className="save-button" type="button" onClick={this.props.saveData}>Save Data</button>
+      </div>
     );
   }
 }
