@@ -1,20 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+header {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
 .employee-form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .employee-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .employee-form label {
   margin-bottom: 0.5rem;
-  text-align: left; /* Align text to the left for better readability */
+  text-align: left;
   width: 100%;
-  max-width: 300px; /* Set a max-width to control the form width */
 }
 
 .employee-form input {
@@ -23,10 +42,10 @@
   border-radius: 0.25rem;
   border: 1px solid #ccc;
   width: 100%;
-  max-width: 300px; /* Set a max-width to control the form width */
 }
 
-.employee-form button {
+.employee-form button,
+.save-button {
   padding: 0.5rem 1rem;
   background-color: #0077cc;
   color: #fff;
@@ -35,27 +54,19 @@
   cursor: pointer;
   margin-top: 1rem;
   width: 100%;
-  max-width: 300px; /* Set a max-width to control the form width */
+  max-width: 300px;
 }
 
 .save-button {
-  padding: 0.5rem 1rem;
   background-color: #28a745;
-  color: #fff;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  margin-top: 1rem;
-  width: 100%;
-  max-width: 300px; /* Set a max-width to control the form width */
 }
 
 .employee-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 16px;
-  color: #333;
+  width: 100%;
+  max-width: 600px;
 }
 
 .employee-list h1 {
@@ -68,7 +79,6 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  max-width: 600px;
 }
 
 .employee-list li {
