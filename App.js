@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import EmployeeForm from './Components/EmployeeForm';
-import EmployeeList from './Components/EmployeeList'; // Adjust the path based on your file structure
+import EmployeeList from './Components/EmployeeList';
 
 class App extends Component {
   constructor(props) {
