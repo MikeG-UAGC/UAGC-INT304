@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import EmployeeForm from './Components/EmployeeForm';
 import EmployeeList from './Components/EmployeeList';
+import './Components/EmployeeForm.css';
 
 class App extends Component {
   constructor(props) {
@@ -28,13 +29,17 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <h1>Employee Management</h1>
+        <div className="container">
+          <header>Employee Management</header>
           <Routes>
             <Route path="/" element={
               <div>
-                <EmployeeForm addEmployee={this.addEmployee} saveData={this.saveData} />
-                <EmployeeList employees={this.state.employees} />
+                <div className="employee-form-container">
+                  <EmployeeForm addEmployee={this.addEmployee} saveData={this.saveData} />
+                </div>
+                <div className="employee-list-container">
+                  <EmployeeList employees={this.state.employees} />
+                </div>
               </div>
             } />
           </Routes>
